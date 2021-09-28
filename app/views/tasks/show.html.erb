@@ -1,0 +1,8 @@
+<div class="container text-center">
+<h1><%=@task.title %></h1>
+
+<div class="mx-auto border mt-3 mb-3 py-3 rounded" style="width: 30%;"><%=@task.details  %></div>
+
+
+<%= link_to "Back to list", tasks_path  %> | <%= link_to "edit", edit_path  %>
+</div>

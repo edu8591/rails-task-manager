@@ -1,2 +1,13 @@
-<h1>My Tasks</h1>
 
+
+<div class="container border-bottom">
+<h1>My Tasks</h1>
+<ul>
+<% @tasks.each do |task| %>
+<li><%=link_to task.title, task_path(task)%> <%=link_to "delete", task_path(task), method: :delete %></li>
+<% end %>
+</ul>
+</div>
+<div class="container">
+<%= link_to "create new task",tasks_new_path, class:"btn btn-primary mt-3"  %>
+</div>
